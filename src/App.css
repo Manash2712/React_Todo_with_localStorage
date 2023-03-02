@@ -1,38 +1,66 @@
-.App {
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  background-color: rgb(104, 104, 104);
+}
+h1 {
   text-align: center;
+  margin-top: 20px;
+  color: aliceblue;
+  /* position: sticky; 
+  top: 1.4%;
+  z-index: 2; */
+  /* height: 20px; */
+  /* background-color: rgb(104, 104, 104); */
+}
+form {
+  position: sticky; 
+  top: 0%;
+  z-index: 2;
+  margin-right: 30%;
+  margin-left: 30%;
+  margin-top: 1%;
+  border-radius: 8px;
+  border: 2px solid rgb(66, 66, 180);
+  color: #000;
+  box-shadow: 0 2px 4px 4px rgba(0, 0, 0, 0.5);
+  background-color: rgb(104, 104, 104);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+form>div:first-child{
+  margin-bottom: 0 !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.items {
+  margin-right: 30%;
+  margin-left: 30%;
+  margin-top: 1%;
+  border-radius: 8px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.form-group {
+  margin-bottom: 0px;
+}
+
+.completedTodo {
+  background-color: darkgray;
+  text-decoration: line-through;
+}
+
+.list-group-item>span{
+  float: right;
+}
+
+/* .container-fluid{
+  height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+  justify-content: flex-start;
+} */
