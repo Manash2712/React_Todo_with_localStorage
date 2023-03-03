@@ -7,17 +7,20 @@ import Todos from './Components/Todos';
 import TodoForm from './Components/TodoForm';
 
 const App = () => {
-  const [todos, setTodos] = useState([]);
+  const [todos, setTodos] = useState(() => {
+    return JSON.parse(localStorage.getItem("todos") || [])
+  });
 
   //useeffect takes 2 parameters a callback and list of dependecy and its compulsory
   useEffect(() => {
     const localTodos = localStorage.getItem("todos")
+    console.log({ localStorage });
     if (localTodos) {
       setTodos(JSON.parse(localTodos))
     }
   }, []);
 
-  const addTodos = async todo => {
+  const addTodos = async (todo) => {
     setTodos([...todos, todo])
   }
 
